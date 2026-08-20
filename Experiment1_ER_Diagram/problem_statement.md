@@ -22,32 +22,23 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+
+<img width="752" height="412" alt="image" src="https://github.com/user-attachments/assets/0483f803-0e3d-467c-959f-79aea6cb693c" />
+
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="827" height="307" alt="image" src="https://github.com/user-attachments/assets/5d890744-735f-4a60-a45f-dbcb991cc077" />
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="806" height="160" alt="image" src="https://github.com/user-attachments/assets/d695e2a1-c040-43ab-8d3d-43f0f9a755e9" />
+
 
 ### Assumptions
-- 
-- 
-- 
-
+- Membership type determines allowed programs but not restricted in ER model. -Personal training sessions are optional. -Payments cover both membership fees and session fees.
 ---
 
 # Scenario B: City Library Event & Book Lending System
@@ -64,31 +55,25 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+
+<img width="707" height="808" alt="image" src="https://github.com/user-attachments/assets/c3442a1f-6596-426c-88bc-89ba2cd31ce9" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="822" height="367" alt="image" src="https://github.com/user-attachments/assets/ca71b7f3-f75b-4536-a2c6-91231d26baee" />
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="826" height="335" alt="image" src="https://github.com/user-attachments/assets/c7fb8b19-9415-4691-b568-d6181d160077" />
+
 
 ### Assumptions
-- 
-- 
-- 
+- Overdue fines are stored per Loan record.
+BookCopy not modeled
+Rooms serve both events and study bookings.
+
 
 ---
 
@@ -106,31 +91,32 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+<img width="792" height="470" alt="image" src="https://github.com/user-attachments/assets/3d097a4b-6601-457a-8eb2-827716706bfd" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+| Entity   | Attributes (PK, FK)                 | Notes                                                    |
+|----------|-------------------------------------|----------------------------------------------------------|
+|CHEF      |chef_id (PK),chef_name,chef_salary   |each chef is uniquely identified by chef_id Prepares meals|
+|MEAL      |meal_name(PK),meal_price             |A meal is prepared by chefs,ordered by customers          |
+|INGREDENTS|ing_name(PK),description             |Each ingredient has a unique name and is linked to meals  |
+|CUSTOMERS |cust_phone(PK),cust_name,cust_address|Customer place orders for meals                           |
+|SUPPLIER  |S_id(PK),S_name,S_city               |suppiler attend to customers                              |
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="841" height="258" alt="image" src="https://github.com/user-attachments/assets/ffbc88ed-737f-4885-9411-3fe38348ad2e" />
+
+
+
+
+
+
 
 ### Assumptions
-- 
-- 
-- 
+- Each chef can prepare multiple meals, but a meal is prepared by only one chef. A customer can place multiple orders, and each order may include one or more meals. Each meal consists of one or more ingredients, and an ingredient may be used in multiple meals.
+  
 
 ---
 
