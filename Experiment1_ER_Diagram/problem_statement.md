@@ -123,9 +123,20 @@ A popular restaurant wants to manage reservations, orders, and billing.
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
+| prepares                     CHEF(total),    One chef 
+                                             can prepare many meals, 
+                                             but a meal is 
+                                             prepared by 
+                                             one chef.
+                               MEAL(partial)
+  (CHEF-MEAL)  |    1:N     |               |       |
 |              |            |               |       |
 |              |            |               |       |
-|              |            |               |       |
+
+
+
+
+
 
 ### Assumptions
 - 
